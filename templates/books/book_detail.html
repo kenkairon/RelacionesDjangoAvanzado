@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ book.title }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <!-- Imagen del libro (si está disponible) -->
+        <div class="col-md-4">
+            {% if book.cover_image %}
+                <img src="{{ book.cover_image.url }}" alt="{{ book.title }}" class="img-fluid rounded">
+            {% else %}
+                <div class="bg-light rounded p-5 text-center">
+                    <span class="text-muted">Sin imagen</span>
+                </div>
+            {% endif %}
+        </div>
+        
+        <!-- Información del libro -->
+        <div class="col-md-8">
+            <h1 class="mb-2">{{ book.title }}</h1>
+            <h5 class="text-muted mb-3">por {{ book.author }}</h5>
+            
+            <div class="mb-3">
+                <span class="badge bg-primary">{{ book.category }}</span>
+            </div>
+            
+            <div class="fs-4 mb-3 fw-bold text-primary">
+                ${{ book.price }}
+            </div>
+            
+            <div class="mb-4">
+                <p>{{ book.description }}</p>
+            </div>
+            
+            <div class="mb-4">
+                <h5>Detalles:</h5>
+                <ul class="list-unstyled">
+                    {% if book.isbn %}
+                        <li><strong>ISBN:</strong> {{ book.isbn }}</li>
+                    {% endif %}
+                    {% if book.publication_date %}
+                        <li><strong>Fecha de publicación:</strong> {{ book.publication_date }}</li>
+                    {% endif %}
+                    {% if book.pages %}
+                        <li><strong>Páginas:</strong> {{ book.pages }}</li>
+                    {% endif %}
+                </ul>
+            </div>
+            
+            <div class="d-grid gap-2 d-md-block">
+                <a href="{% url 'book-list' %}" class="btn btn-primary">Volver a la lista</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
