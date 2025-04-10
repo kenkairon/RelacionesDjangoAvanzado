@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Django Project README
 
 ## Overview
@@ -158,3 +159,7 @@ Please read the CONTRIBUTING.md file for details on the code of conduct and the 
 ## License
 
 This project is licensed under the [License Name] - see the LICENSE.md file for details.
+=======
+# RelacionesDjangoAvanzado
+Educativo y de Aprendizaje Personal
+>>>>>>> fdbf7f40fb9a67bf951714ab656483b91cc3caa7
