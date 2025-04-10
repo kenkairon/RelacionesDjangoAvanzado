@@ -35,6 +35,7 @@ class Book(models.Model):
 class Buyer(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
+    address = models.TextField(null=True)
     # Many-to-Many relationship (Buyers can purchase many books, and books can be purchased by many buyers)
     purchased_books = models.ManyToManyField(Book, through='Purchase')
 
