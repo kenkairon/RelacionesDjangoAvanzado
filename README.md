@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Django Project README
 
 ## Overview
@@ -162,4 +162,3 @@ This project is licensed under the [License Name] - see the LICENSE.md file for 
 =======
 # RelacionesDjangoAvanzado
 Educativo y de Aprendizaje Personal
->>>>>>> fdbf7f40fb9a67bf951714ab656483b91cc3caa7
